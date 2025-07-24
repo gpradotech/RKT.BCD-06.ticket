@@ -52,6 +52,6 @@ const cardWidth = card.offsetWidth; // recupera a largura do cartão
   cursor.style.width = `${cardWidth}px`
   cursor.style.height = `${cardHeight}px`
 
-  cursor.style.left = `${posX - centerX}px`
-  cursor.style.top = `${posY - centerY}px`
+  cursor.style.left = `${posX - (screen.width-cardWidth)/2}px`
+  cursor.style.top = `${posY}px`
 });
