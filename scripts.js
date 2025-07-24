@@ -44,12 +44,14 @@ const cursor = document.getElementById('cursor');
 window.addEventListener("mousemove", (e) => {
   const posX = e.clientX;
   const posY = e.clientY;
-  const cardWidth = card.offsetWidth; // recupera a largura do cartão
+const cardWidth = card.offsetWidth; // recupera a largura do cartão
   const cardHeight = card.offsetHeight; // recupera a altura do cartão
+  const centerX = card.offsetLeft + cardWidth/2; // recupera o centro do eixo x
+  const centerY = card.offsetTop + cardHeight/2; // recupera o centro do eixo y
 
   cursor.style.width = `${cardWidth}px`
   cursor.style.height = `${cardHeight}px`
 
-  cursor.style.left = `${posX - 400}px`
-  cursor.style.top = `${posY}px`
+  cursor.style.left = `${posX - centerX}px`
+  cursor.style.top = `${posY - centerY}px`
 });
